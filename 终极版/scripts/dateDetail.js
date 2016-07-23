@@ -19,7 +19,7 @@ function dateDetail(y,m,d){
   solar.innerHTML = ""+solardate.getFullYear()+"-"+((solardate.getMonth()+1)<10?("0"+(solardate.getMonth()+1)):(solardate.getMonth()+1))+"-"+(detailDay<10?("0"+detailDay):detailDay);
   solar.innerHTML += " 星期"+nStr1[solardate.getDay()];
   day.innerHTML = ""+detailDay;
-  lunar.innerHTML = "农历"+nStr1[lunarCld[detailDay-1].lMonth]+"月"+chineseDay(lunarCld[detailDay-1].lDay);
+  lunar.innerHTML = "农历"+nStr3[lunarCld[detailDay-1].lMonth]+"月"+chineseDay(lunarCld[detailDay-1].lDay);
   TianDi.innerHTML = ""+lunarCld[detailDay-1].cYear+"年"+lunarCld[detailDay-1].cMonth+"月"+lunarCld[detailDay-1].cDay+"日";
   animal.innerHTML = "["+Animals[(solardate.getFullYear()-1900)%12]+"年]";
 
