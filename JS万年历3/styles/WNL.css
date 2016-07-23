@@ -1,0 +1,290 @@
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	text-align: center;
+	font-family: "微软雅黑";
+	color:#333;
+	background: #fff9e8;
+}
+
+table{
+	position: relative;
+	border:1px solid #ccc;
+	border-right:none;
+	cellpadding:2;
+	cellspacing:2;
+	width:500px;
+	text-align:center;
+}
+
+input[type="button"]{
+	outline: none;
+	outline-offset: 0 !important;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 5px;
+    background: transparent;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    cursor: pointer;
+    color:#333;
+}
+input[type="button"]:hover{
+	color:#fff;
+	border: 1px solid #4a89dc;
+	background: #4a89dc;
+	-webkit-transition:all 0.15s;
+	-moz-transition:all 0.15s;
+	-o-transition:all 0.15s;
+	-ms-transition:all 0.15s;
+	transition:all 0.15s;
+}
+select{
+    background: transparent;
+    border-radius: 3px;
+}
+
+td {
+	width: 50px;
+	height: 50px;
+}
+
+.logo{
+	width: 304px;
+	height: 122px;
+	background-image:url('../image/wannianli.png');
+	margin:0 auto;
+}
+
+.sunday{
+	color:#b04343;
+}
+.saturday{
+	color:#b04343;
+}
+
+/*时钟模块*/
+#clock{
+	margin-top: -10px;
+   	margin-bottom: 10px;
+    font-size: 20px;
+    color:#945f43;
+}
+
+
+/*包含月选择器跟年选择器以及日历*/
+
+#wln{
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin-right:-6px;
+	background:transparent;
+}
+
+.weekTitle{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#lunarDiv{
+	position: absolute;
+	top: 0;
+	z-index: 0;
+	width: 800px;
+	height: 420px;
+	margin:0 auto;
+	background-size: cover;
+	color:#fff;
+	background-color:rgba(255,255,255,0.5);
+	opacity: 0.3;
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+	-o-transition:all 0.3s;
+	-ms-transition:all 0.3s;
+	transition:all 0.3s;
+}
+.spring{
+	background-image:url('../image/spring.jpg');
+}
+.summer{
+	background-image:url('../image/summer.jpg');
+}
+.autumn{
+	background-image:url('../image/autumn.jpg');
+}
+.winter{
+	background-image:url('../image/winter.jpg');
+}
+
+/*年选择器*/
+#nian{
+
+}
+
+/*月选择器*/
+#yue{
+
+}
+
+/*日历*/
+#calendar{
+	
+}
+
+#calendar tr td{
+	cursor: pointer;
+}
+
+#calendar tr td:nth-child(1) .solarDate{
+	color:#b04343;
+}
+
+#calendar tr td:nth-child(7) .solarDate{
+	color:#b04343;
+}
+
+/*日历里面国历数字部分*/
+.solarDate{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*日历里农历假日汉字 春节*/
+.lunarHoliday{
+	color: #b04343;
+	font-size: 14px;
+}
+
+/*日历里节气汉字 立春*/
+.sTermHoliday{
+	color:#8eb475;
+	font-size: 14px;
+}
+
+/*日历里面国历假期汉字 国庆节*/
+.solarHoliday{
+	color: #b04343;
+	font-size: 14px;
+}
+
+/*日历里面按每月第几个星期假期汉字 母亲节*/
+.yueZhouHoliday{
+	color:#86a9c0;
+	font-size: 14px;
+}
+
+/*正常工作日汉字 初一*/
+.workday{
+	font-size: 14px;
+}
+
+
+
+/*详细日期容器*/
+#detailContainer{
+
+}
+/*当日详细信息*/
+#detail{
+
+}
+
+/*2016-04-10 星期日*/
+#solar{
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    color: #fff;
+    background: url(http://p8.qhimg.com/t0146c8122c611efe68.gif) repeat-x;
+}
+
+/*10*/
+#day {
+    padding-top: 15px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 66px;
+    color: #b04343;
+}
+
+/*农历三月初四*/
+#lunar{
+	padding-top: 15px;
+	color:#666;
+}
+
+/*丙申年壬辰月壬戌日*/
+#TianDi{
+	padding-top: 7px;
+	color:#666;
+}
+
+/*猴年*/
+#animal{
+	padding-top: 7px;
+	padding-bottom: 15px;
+	color:#666;
+}
+
+/*事宜容器*/
+#YiJi{
+	font-size: 14px;
+}
+
+.yiDiv{
+	width: 150px;
+	color:#b04343;
+	float:left;
+}
+.jiDiv{
+	width: 150px;
+	color:#666;
+	float:left;
+}
+.yi{
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.ji{
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#Yi{
+}
+
+#Ji{
+	
+}
+
+/*容器背景，根据是否为节日设置不同背景，工作日还是放假*/
+#detailContainer{
+	position: relative;
+	display: inline-block;
+	width:300px;
+	height: 418px;
+	border:1px solid #ccc;
+	border-left:none;
+	background:transparent;
+}
+.rest{
+	background:#dab9b9;
+}
+
+.work{
+	background:#F9F6E9;
+}
+
+.cross-month{
+	filter:alpha(opacity=60); /*IE滤镜，透明度60%*/
+	-moz-opacity:0.6; /*Firefox私有，透明度60%*/
+	opacity:0.6;/*其他，透明度60%*/
+}
+
